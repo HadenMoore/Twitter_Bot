@@ -3,8 +3,8 @@ import tweepy
 import config 
 
 # Authorization 
-auth = tweepy.OAuthHandler(consumer_Key, consumer_Secret)
-auth.set_access_Token(access_Token, access_Token_secret)
+auth = tweepy.OAuthHandler(config.consumer_Key, config.consumer_Secret)
+auth.set_access_Token(config.access_Token, config.access_Token_secret)
 
 api = tweepy.API(auth) 
 
