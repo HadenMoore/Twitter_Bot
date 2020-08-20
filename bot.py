@@ -1,10 +1,10 @@
 import tweepy
-#import Tkinter
+from tweepy.auth import OAuthHandler
 import config 
 
 # Authorization 
 auth = tweepy.OAuthHandler(config.consumer_Key, config.consumer_Secret)
-auth.set_access_Token(config.access_Token, config.access_Token_secret)
+auth.set_access_token(config.access_Token, config.access_Token_secret)
 
 api = tweepy.API(auth) 
 
