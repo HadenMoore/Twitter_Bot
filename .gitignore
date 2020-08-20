@@ -110,6 +110,12 @@ ENV/
 env.bak/
 venv.bak/
 
+# Visual Studio Code 
+.vscode
+
+# Key Access
+config.py
+
 # Spyder project settings
 .spyderproject
 .spyproject
