@@ -38,7 +38,7 @@ E3 = Entry(root, bd = 5)
 label4 = Label(root, text = "Shall I Reply?")
 E4 = Entry(root, bd = 5)
 
-label5 = Label(root, text = "Care to Retweet?")
+label5 = Label(root, text = "Shall I Retweet this?")
 E5 = Entry(root, bd = 5)
 
 label6 = Label(root, text = "Shall I Favorite this?")
@@ -125,7 +125,7 @@ def mainFunction():
                 break
 
 submit = Button(root, text = "Submit", command = mainFunction, 
-                background="blue", foreground="white")
+                bg="blue", fg="white")
 
 label1.pack()
 E1.pack()
