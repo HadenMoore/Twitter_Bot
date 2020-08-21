@@ -95,6 +95,7 @@ def mainFunction():
             
             except tweepy.TweepError as e:
                 print(e.reason)
+
             except StopIteration:
                 break
     
@@ -104,12 +105,10 @@ def mainFunction():
                 # Favorite
                 tweet.favorite()
                 print('I took the liberty of Favoriting The Tweet, Sir')
-
-                except tweepy.TweepError as e: 
-                    print(e.reason)
-                
-                except StopIteration: 
-                    break
+            except tweepy.TweepError as e: 
+                print(e.reason)
+            except StopIteration:
+                break
     
     if follow == 'Yes': 
         for tweet in tweepy.Cursor(api.search, search).items(numberOfTweets):
@@ -117,12 +116,11 @@ def mainFunction():
                 #Follow 
                 tweet.user.follow()
                 print('I took the liberty and Follow the User, sir.')
+            except tweepy.TweepError as e: 
+                print(e.reason)
+            except StopIteration:
+                break
 
-                except tweepy.TweepError as e: 
-                    print(e.reason)
-                
-                except StopIteration: 
-                    break
 submit = Button(root, text="Submit", command = mainFunction)
 
 label1.pack()
