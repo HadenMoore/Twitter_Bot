@@ -21,7 +21,10 @@ for follower in tweepy.Cursor(api.followers).items():
 
 print('Followed Everyone that is Currently Following.' + user.name)
 
+# Tk Window Settings:
 root = Tk()
+root.title('Jeffery The Bot')
+
 # GUI Labels: 
 label1 = Label(root, text = "Search")
 E1 = Entry(root, bd = 5)
@@ -32,7 +35,7 @@ E2 = Entry(root, bd = 5)
 label3 = Label(root, text = "Response")
 E3 = Entry(root, bd = 5)
 
-label4 = Label(root, text = "Care to Reply?")
+label4 = Label(root, text = "Shall I Reply?")
 E4 = Entry(root, bd = 5)
 
 label5 = Label(root, text = "Care to Retweet?")
@@ -121,7 +124,8 @@ def mainFunction():
             except StopIteration:
                 break
 
-submit = Button(root, text="Submit", command = mainFunction)
+submit = Button(root, text = "Submit", command = mainFunction, 
+                background="blue", foreground="white")
 
 label1.pack()
 E1.pack()
